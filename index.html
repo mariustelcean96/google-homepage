@@ -9,8 +9,9 @@
         .container-header {
             display: flex;
             justify-content: flex-end;
+            align-items: center;
             height: 100px;
-            grid-gap: 10px;
+            padding: 10px;
         }
         .item-header-gmail {
             width: 10%;
@@ -19,6 +20,13 @@
         .item-header-images {
             width: 10%;
             height: 100%;
+        }
+        .material-icons-outlined {
+            border-radius: 50%;
+        }
+        .material-icons-outlined a:hover {
+            background-color: lightgrey;
+            border-radius: 50%;
         }
         .item-header-profile-pic {
             border-radius: 50%;
@@ -29,6 +37,7 @@
         .container-body {
             display: grid;
             justify-items: center;
+            align-self: center;
             grid-gap: 10px;
             grid-template-columns: 100px 100px 100px 100px;
             grid-template-areas: "logo logo logo logo"
@@ -57,18 +66,67 @@
             border-bottom-right-radius: 5px;
             grid-area: keyboard-icon;
         }
-        .item-body-search-google {
-            
+        .item-body-search-google, .item-body-feeling-lucky {
+            grid-area: search-google;
+        }
+        [type='submit'] {
+            border: 0px;
+            opacity: 0.2;
+            padding: 10px;
+            margin: 10px;
+        }
+        .item-body-google-provided-in {
+            font-size: 0.9em;
+            grid-area: google-provided-in;
+        }
+        .item-body-English {
+            font-size: 0.9em;
+            grid-area: English;
+        }
+        .item-body-magyar {
+            font-size: 0.9em;
+            grid-area: magyar;
+        }
+        .item-body-Deutsch {
+            font-size: 0.9em;
+            grid-area: Deutsch;
+        }
+        /* Footer */
+        .container-footer-1 {
+            background-color: lightgrey;
+            width: 100%;
+            height: 60px;
+            border: 0px 1px 0px 0px solid lightslategrey;
+            display: flex;
+        }
+        .item-footer-container-1 {
+            justify-content: flex-start;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        .container-footer-2 {
+            background-color: lightgrey;
+            width: 100%;
+            height: 60px;
+            display: flex;
+        }
+        .item-footer-container-2-left {
+            justify-content: flex-start;
+            padding: 23px;
+        }
+        .item-footer-container-2-right {
+            justify-content: flex-end;
+            padding: 23px;
         }
     </style>
 </head>
 <body>
     <header>
         <div class="container-header">
-            <div class="item-header-gmail">Gmail</div>
-            <div class="item-header-images">Imagini</div>
-            <div class="item-header-menu"><span class="material-icons-outlined">apps</span></div>
-            <div class="item-header-profile-pic"><img alt="Marius Telcean's profile picture, taken during a festival that took place in Cluj-Napoca's Central Park."src="profile-Pic.png"></div>
+            <div class="item-header-gmail"><a href="#">Gmail</a></div>
+            <div class="item-header-images"><a href="#">Imagini</a></div>
+            <div class="item-header-menu"><a href="#" title="Aplicaţii Google"><span class="material-icons-outlined">apps</span></a></div>
+            <div class="item-header-profile-pic"><img title="Google logo" alt="Marius Telcean's profile picture, taken during a festival that took place in Cluj-Napoca's Central Park."src="profile-Pic.png"></div>
         </div>
     </header>
     <main>
@@ -83,10 +141,35 @@
                 <input id="search-box" name="search-box" type="text"></input>
             </div>
             <div class="item-body-keyboard-icon">
-                <span class="material-icons-outlined">keyboard</span>
+                <span title="Instrumente pentru introducere de text" class="material-icons-outlined">keyboard</span>
             </div>
+            <div class=".item-body-search-google">
+                <button type="submit">Căutare Google</button>
+            </div>
+            <div class=".item-body-feeling-lucky">
+                <button type="submit">Mă simt norocos</button>
+            </div>
+            <div class="item-body-google-provided-in">
+                <p>Google oferit în:</p>
+            </div>
+            <div clas="item-body-English"><a href="#">English</a></div>
+            <div clas="item-body-magyar"><a href="#">magyar</a></div>
+            <div clas="item-body-Deutsch"><a href="#">Deutsch</a></div>
         </div>
     </main>
-    <footer></footer>
+    <footer>
+        <div class="container-footer-1">
+            <div class="item-footer-container-1">România</div>
+        </div>
+        <div class="container-footer-2">
+            <div class="item-footer-container-2-left"><a href="#">Despre</a></div>
+            <div class="item-footer-container-2-left"><a href="#">Publicitate</a></div>
+            <div class="item-footer-container-2-left"><a href="#">Companii</a></div>
+            <div class="item-footer-container-2-left"><a href="#">Cum funcţionează căutarea</a></div>
+            <div class="item-footer-container-2-right"><a href="#">Confidenţialitate</a></div>
+            <div class="item-footer-container-2-right"><a href="#">Termeni</a></div>
+            <div class="item-footer-container-2-right"><a href="#">Setări</a></div>
+        </div>
+        </footer>
 </body>
 </html>
