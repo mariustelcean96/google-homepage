@@ -3,23 +3,37 @@
 <head>
     <title>Google</title>
     <meta charset="utf-8">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
     <style>
         /* Header */
+        header a:visited, a:link {
+            text-decoration: none;
+            color: rgb(83, 78, 78);
+        }
+        header a:hover {
+            text-decoration: underline;
+        }
         .container-header {
             display: flex;
             justify-content: flex-end;
-            align-items: center;
-            height: 100px;
-            padding: 10px;
+            height: 50px;
+            font-size: 0.8em;
         }
-        .item-header-gmail {
-            width: 10%;
-            height: 100%;
+        .item-header-gmail, .item-header-images, .item-header-profile-pic {
+            
+            padding: 5px 10px;
+            width: auto;
+            height: 10%;
+        }
+        .item-header-gmail, .item-header-images, .apps-icon {
+            margin-top: 13px;
+        }
+      /* .item-header-gmail {
+           
         }
         .item-header-images {
-            width: 10%;
-            height: 100%;
         }
         .material-icons-outlined {
             border-radius: 50%;
@@ -27,11 +41,16 @@
         .material-icons-outlined a:hover {
             background-color: lightgrey;
             border-radius: 50%;
-        }
+        }*/
         .item-header-profile-pic {
             border-radius: 50%;
-            width: 50px;
+            width: 25px;
             height: auto;
+            border: 0;
+            margin: 0px;
+            margin-right: 10px;
+        }
+        .item-header-profile-pic:hover {
         }
         /* Body */
         .container-body {
@@ -74,6 +93,10 @@
             opacity: 0.2;
             padding: 10px;
             margin: 10px;
+        }
+        [type='submit']:hover {
+            border: 1px solid lightgrey;
+            border-radius: 2px;
         }
         .item-body-google-provided-in {
             font-size: 0.9em;
@@ -125,10 +148,12 @@
         <div class="container-header">
             <div class="item-header-gmail"><a href="#">Gmail</a></div>
             <div class="item-header-images"><a href="#">Imagini</a></div>
-            <div class="item-header-menu"><a href="#" title="Aplicaţii Google"><span class="material-icons-outlined">apps</span></a></div>
-            <div class="item-header-profile-pic"><img title="Google logo" alt="Marius Telcean's profile picture, taken during a festival that took place in Cluj-Napoca's Central Park."src="profile-Pic.png"></div>
+            <div class="item-header-menu"><a href="#" title="Aplicaţii Google"><img class="apps-icon" src="apps_black_24dp.svg" alt="apps icon"></a></div>
+            <div class="item-header-profile-pic"><img class="item-header-profile-pic" title="Cont Google Telcean Marius marius.telcean96@gmail.com" alt="Marius Telcean's profile picture, taken during a festival that took place in Cluj-Napoca's Central Park." src="profile-Pic.png"></div>
         </div>
-    </header>
+        
+    </header> 
+    <!--
     <main>
         <div class="container-body">
             <div class="item-body-logo">
@@ -170,6 +195,6 @@
             <div class="item-footer-container-2-right"><a href="#">Termeni</a></div>
             <div class="item-footer-container-2-right"><a href="#">Setări</a></div>
         </div>
-        </footer>
+        </footer>-->
 </body>
 </html>
