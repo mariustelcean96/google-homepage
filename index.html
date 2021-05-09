@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ro-RO">
+<head>
+    <title>Google</title>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        /* Header */
+        .container-header {
+            display: flex;
+            justify-content: flex-end;
+            height: 100px;
+            grid-gap: 10px;
+        }
+        .item-header-gmail {
+            width: 10%;
+            height: 100%;
+        }
+        .item-header-images {
+            width: 10%;
+            height: 100%;
+        }
+        .item-header-profile-pic {
+            border-radius: 50%;
+            width: 50px;
+            height: auto;
+        }
+        /* Body */
+        .container-body {
+            display: grid;
+            justify-items: center;
+            grid-gap: 10px;
+            grid-template-columns: 100px 100px 100px 100px;
+            grid-template-areas: "logo logo logo logo"
+                                 "mag-glass-icon input input keyboard-icon"
+                                 "search-google search-google feeling-lucky feeling-lucky"
+                                 "google-provided-in" "English" "magyar" "Deutsch";
+        }
+        .item-body-logo {
+            display: block;
+            grid-area: logo;
+        }
+        .item-body-mag-glass-icon {
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            border-right: 0px;
+            grid-area: mag-glass-icon;
+        }
+        .item-body-search-box {
+            border-left: 0px;
+            border-right: 0px;
+            grid-area: input;
+        }
+        .item-body-keyboard-icon {
+            border-left: 0px;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            grid-area: keyboard-icon;
+        }
+        .item-body-search-google {
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container-header">
+            <div class="item-header-gmail">Gmail</div>
+            <div class="item-header-images">Imagini</div>
+            <div class="item-header-menu"><span class="material-icons-outlined">apps</span></div>
+            <div class="item-header-profile-pic"><img alt="Marius Telcean's profile picture, taken during a festival that took place in Cluj-Napoca's Central Park."src="profile-Pic.png"></div>
+        </div>
+    </header>
+    <main>
+        <div class="container-body">
+            <div class="item-body-logo">
+                <img alt="Google's modern logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
+            </div>
+            <div class="item-body-mag-glass-icon">
+                <span class="material-icons-outlined">search</span>
+            </div>
+            <div class="item-body-search-box">
+                <input id="search-box" name="search-box" type="text"></input>
+            </div>
+            <div class="item-body-keyboard-icon">
+                <span class="material-icons-outlined">keyboard</span>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+</html>
