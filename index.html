@@ -54,92 +54,146 @@
         }
         /* Body */
         .container-body {
-            display: grid;
-            justify-items: center;
-            align-self: center;
-            grid-gap: 10px;
-            grid-template-columns: 100px 100px 100px 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: space-evenly;
+            justify-content: space-evenly;
+            /* justify-content: center;
+            grid-template-columns: auto auto auto auto;
+            grid-template-rows: auto auto auto auto;
             grid-template-areas: "logo logo logo logo"
                                  "mag-glass-icon input input keyboard-icon"
                                  "search-google search-google feeling-lucky feeling-lucky"
-                                 "google-provided-in" "English" "magyar" "Deutsch";
+                                 "google-provided-in English magyar Deutsch";*/
         }
         .item-body-logo {
-            display: block;
-            grid-area: logo;
+            
+            align-self: center;
+            margin-bottom: 50px;
+           /* grid-area: logo;*/
+        }
+        
+        .contaier-magglass-searchbox-keyboard {
+            
+            display: flex;
+            flex-direction: row;
+            align-self: center;
+            margin-bottom: 50px;
         }
         .item-body-mag-glass-icon {
+            
             border-top-left-radius: 5px;
             border-bottom-left-radius: 5px;
             border-right: 0px;
-            grid-area: mag-glass-icon;
+            margin: 0 auto;
+            /*grid-area: mag-glass-icon */
         }
-        .item-body-search-box {
-            border-left: 0px;
-            border-right: 0px;
+       /*.item-body-search-box {
             grid-area: input;
-        }
+        }*/
+        [type='text'] {
+                margin: 0;
+                
+            }
         .item-body-keyboard-icon {
+            
             border-left: 0px;
             border-top-right-radius: 5px;
             border-bottom-right-radius: 5px;
-            grid-area: keyboard-icon;
+           /* grid-area: keyboard-icon;*/
         }
-        .item-body-search-google, .item-body-feeling-lucky {
-            grid-area: search-google;
+        .container-searchgoogle-feelinglucky {
+            display: flex;
+            align-self: center;
+            margin-bottom: 50px;
+        }
+        .item-body-search-google {
+            
+            /*grid-area: search-google;*/
+            
+        }
+        .item-body-feeling-lucky {
+            
+            
+           /* grid-area: feeling-lucky;*/
         }
         [type='submit'] {
             border: 0px;
             opacity: 0.2;
-            padding: 10px;
-            margin: 10px;
+            padding: 5px 10px;
+            margin: 0px;
         }
+        
         [type='submit']:hover {
             border: 1px solid lightgrey;
             border-radius: 2px;
         }
+        .container-googleprovidedin-English-magyar-Deutsch {
+            display: flex;
+            justify-content: space-evenly;
+            border: 1px solid blue;
+            align-self: center;
+        }
         .item-body-google-provided-in {
             font-size: 0.9em;
-            grid-area: google-provided-in;
+            display: flex;
+            align-self: center;
+            margin-bottom: 30px;
+            /*grid-area: google-provided-in;*/
         }
         .item-body-English {
+            
             font-size: 0.9em;
-            grid-area: English;
+            margin: 10px;
+           /* grid-area: English;*/
         }
         .item-body-magyar {
+            
             font-size: 0.9em;
-            grid-area: magyar;
+            margin: 10px;
+           /* grid-area: magyar;*/
         }
         .item-body-Deutsch {
+            
             font-size: 0.9em;
-            grid-area: Deutsch;
+            margin: 10px;
+            /*grid-area: Deutsch;*/
         }
         /* Footer */
+        footer a:link, a:visited, a:hover, a:active {
+            padding: 5px;
+            margin: 5px 10px;
+        }
         .container-footer-1 {
             background-color: lightgrey;
             width: 100%;
-            height: 60px;
-            border: 0px 1px 0px 0px solid lightslategrey;
+            height: auto;
             display: flex;
         }
         .item-footer-container-1 {
-            justify-content: flex-start;
-            align-items: center;
-            padding: 10px 20px;
+            padding: 0px;
+            margin-left: 25px;
+        }
+        hr {
+            padding: 0px;
+            margin: 0px;
+            opacity: 0.6;
         }
         .container-footer-2 {
-            background-color: lightgrey;
-            width: 100%;
-            height: 60px;
             display: flex;
+            flex-direction: row;
+            background-color: lightgrey;
+            justify-content: center;
         }
         .item-footer-container-2-left {
-            justify-content: flex-start;
-            padding: 23px;
+            margin-left: 0px;
+            padding: 5px;
+            width: 50%;
         }
         .item-footer-container-2-right {
-            justify-content: flex-end;
-            padding: 23px;
+            margin-left: 300px;
+            padding: 5px;
+            max-width: 50%;
         }
     </style>
 </head>
@@ -153,48 +207,60 @@
         </div>
         
     </header> 
-    <!--
+    
     <main>
         <div class="container-body">
             <div class="item-body-logo">
                 <img alt="Google's modern logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
             </div>
-            <div class="item-body-mag-glass-icon">
-                <span class="material-icons-outlined">search</span>
+            <div class="contaier-magglass-searchbox-keyboard">
+                <div class="item-body-mag-glass-icon">
+                    <img alt="Google magnifying glass icon" src="search_black_24dp.svg">
+                </div>
+                <div class="item-body-search-box">
+                    <input id="search-box" name="search-box" type="text"></input>
+                </div>
+                    <div class="item-body-keyboard-icon">
+                        <img alt="Google keyboard icon" src="keyboard_black_24dp.svg">
+                    </div>
             </div>
-            <div class="item-body-search-box">
-                <input id="search-box" name="search-box" type="text"></input>
+            <div class="container-searchgoogle-feelinglucky">
+                <div class="item-body-search-google">
+                    <button type="submit">Căutare Google</button>
+                </div>
+                <div class="item-body-feeling-lucky">
+                    <button type="submit">Mă simt norocos</button>
+                </div>
             </div>
-            <div class="item-body-keyboard-icon">
-                <span title="Instrumente pentru introducere de text" class="material-icons-outlined">keyboard</span>
+            <div class="item-body-google-provided-in"><p class="item-body-google-provided-in">Google oferit în:</p>
+                <div class="item-body-English"><a href="#">English</a></div>
+                <div class="item-body-magyar"><a href="#">magyar</a></div>
+                <div class="item-body-Deutsch"><a href="#">Deutsch</a></div>
             </div>
-            <div class=".item-body-search-google">
-                <button type="submit">Căutare Google</button>
-            </div>
-            <div class=".item-body-feeling-lucky">
-                <button type="submit">Mă simt norocos</button>
-            </div>
-            <div class="item-body-google-provided-in">
-                <p>Google oferit în:</p>
-            </div>
-            <div clas="item-body-English"><a href="#">English</a></div>
-            <div clas="item-body-magyar"><a href="#">magyar</a></div>
-            <div clas="item-body-Deutsch"><a href="#">Deutsch</a></div>
         </div>
+        
+       <!-- <div class="container-body">
+            <div class="item-body-logo">item-body-logo</div>
+            <div class="item-body-mag-glass-icon">item-body-mag-glass-icon</div>
+            <div class="item-body-search-box">item-body-search-box</div>
+            <div class="item-body-keyboard-icon">item-body-keyboard-icon</div>
+            <div class="item-body-search-google">item-body-search-google</div>
+            <div class="item-body-feeling-lucky">item-body-feeling-lucky</div>
+            <div class="item-body-google-provided-in">item-body-google-provided-in</div>
+            <div class="item-body-English">item-body-English</div>
+            <div class="item-body-magyar">item-body-magyar</div>
+            <div class="item-body-Deutsch">item-body-Deutsch</div>
+        </div>-->
     </main>
+
     <footer>
-        <div class="container-footer-1">
-            <div class="item-footer-container-1">România</div>
-        </div>
+       <div class="container-footer-1">
+            <div class="item-footer-container-1"><p style="padding: 0px;">România</p></div>
+        </div><hr>
         <div class="container-footer-2">
-            <div class="item-footer-container-2-left"><a href="#">Despre</a></div>
-            <div class="item-footer-container-2-left"><a href="#">Publicitate</a></div>
-            <div class="item-footer-container-2-left"><a href="#">Companii</a></div>
-            <div class="item-footer-container-2-left"><a href="#">Cum funcţionează căutarea</a></div>
-            <div class="item-footer-container-2-right"><a href="#">Confidenţialitate</a></div>
-            <div class="item-footer-container-2-right"><a href="#">Termeni</a></div>
-            <div class="item-footer-container-2-right"><a href="#">Setări</a></div>
+            <div class="item-footer-container-2-left"><a href="#">Despre</a><a href="#">Publicitate</a><a href="#">Companii</a><a href="#">Cum funcţionează căutarea</a></div>
+            <div class="item-footer-container-2-right"><a href="#">Confidenţialitate</a><a href="#">Termeni</a><a href="#">Setări</a></div>
         </div>
-        </footer>-->
+    </footer>
 </body>
 </html>
