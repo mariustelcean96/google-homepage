@@ -1,133 +1,105 @@
 <!DOCTYPE html>
 <html lang="ro-RO">
 <head>
+    <link rel="shortcut icon" href="https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png">
     <title>Google</title>
     <meta charset="utf-8">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
     <style>
         /* Header */
-        header a:visited, a:link {
+        ul {
+            list-style-type: none;
+            margin: 5px 10px;
+            padding: 5px;
+        }
+
+        header li {
+            float: right;
+            padding: 10px;
+        }
+        li a:visited, li a:link {
+            display: block;
+            padding: 5px;
             text-decoration: none;
             color: rgb(83, 78, 78);
         }
+        
         header a:hover {
             text-decoration: underline;
         }
-        .container-header {
-            display: flex;
-            justify-content: flex-end;
-            height: 50px;
-            font-size: 0.8em;
+        
+        .material-icons {
+            font-size: 24px; 
         }
-        .item-header-gmail, .item-header-images, .item-header-profile-pic {
-            
-            padding: 5px 10px;
-            width: auto;
-            height: 10%;
-        }
-        .item-header-gmail, .item-header-images, .apps-icon {
-            margin-top: 13px;
-        }
-      /* .item-header-gmail {
-           
-        }
-        .item-header-images {
-        }
-        .material-icons-outlined {
-            border-radius: 50%;
-        }
-        .material-icons-outlined a:hover {
-            background-color: lightgrey;
-            border-radius: 50%;
-        }*/
-        .item-header-profile-pic {
+
+        .header-profile-pic {
             border-radius: 50%;
             width: 25px;
             height: auto;
-            border: 0;
-            margin: 0px;
-            margin-right: 10px;
+            display: block;
+
         }
-        .item-header-profile-pic:hover {
-        }
+        
         /* Body */
         .container-body {
             display: flex;
             flex-direction: column;
             align-items: space-evenly;
             justify-content: space-evenly;
-            /* justify-content: center;
-            grid-template-columns: auto auto auto auto;
-            grid-template-rows: auto auto auto auto;
-            grid-template-areas: "logo logo logo logo"
-                                 "mag-glass-icon input input keyboard-icon"
-                                 "search-google search-google feeling-lucky feeling-lucky"
-                                 "google-provided-in English magyar Deutsch";*/
+            
         }
         .item-body-logo {
-            
             align-self: center;
-            margin-bottom: 50px;
-           /* grid-area: logo;*/
+            margin-top: 35px;
+            margin-left: 200px;
         }
         
         .contaier-magglass-searchbox-keyboard {
-            
             display: flex;
             flex-direction: row;
             align-self: center;
-            margin-bottom: 50px;
+            margin-top: 25px;
+            margin-bottom: 20px;
+            margin-left: 200px;
+        }
+        .contaier-magglass-searchbox-keyboard:hover {
+            box-shadow: 2px 2px 2px 2px grey;
         }
         .item-body-mag-glass-icon {
-            
+            border: 1px solid grey;
             border-top-left-radius: 5px;
             border-bottom-left-radius: 5px;
             border-right: 0px;
             margin: 0 auto;
-            /*grid-area: mag-glass-icon */
+            
         }
-       /*.item-body-search-box {
-            grid-area: input;
-        }*/
+       
         [type='text'] {
-                margin: 0;
-                
+            margin: 0;
             }
         .item-body-keyboard-icon {
-            
+            border: 1px solid grey;
             border-left: 0px;
             border-top-right-radius: 5px;
             border-bottom-right-radius: 5px;
-           /* grid-area: keyboard-icon;*/
+           
         }
         .container-searchgoogle-feelinglucky {
             display: flex;
             align-self: center;
-            margin-bottom: 50px;
-        }
-        .item-body-search-google {
-            
-            /*grid-area: search-google;*/
-            
-        }
-        .item-body-feeling-lucky {
-            
-            
-           /* grid-area: feeling-lucky;*/
-        }
-        [type='submit'] {
-            border: 0px;
-            opacity: 0.2;
-            padding: 5px 10px;
-            margin: 0px;
+            margin-bottom: 20px;
+            margin-left: 200px
         }
         
-        [type='submit']:hover {
-            border: 1px solid lightgrey;
+        [type='submit'] {
+            border: 1px solid transparent;
             border-radius: 2px;
+            opacity: 0.3;
+            padding: 5px 10px;
+            margin: 10px;
         }
+
         .container-googleprovidedin-English-magyar-Deutsch {
             display: flex;
             justify-content: space-evenly;
@@ -139,30 +111,46 @@
             display: flex;
             align-self: center;
             margin-bottom: 30px;
-            /*grid-area: google-provided-in;*/
+            margin-left: 100px;
+            
         }
         .item-body-English {
-            
             font-size: 0.9em;
             margin: 10px;
-           /* grid-area: English;*/
+           
         }
         .item-body-magyar {
-            
             font-size: 0.9em;
             margin: 10px;
-           /* grid-area: magyar;*/
+           
         }
         .item-body-Deutsch {
-            
             font-size: 0.9em;
             margin: 10px;
-            /*grid-area: Deutsch;*/
-        }
+            
+        } 
         /* Footer */
-        footer a:link, a:visited, a:hover, a:active {
+#one {
+    margin: 0px;
+}
+#two {
+    margin: 0px;
+}
+        footer  ul {
+            background-color:rgb(240, 239, 239);
+            overflow: hidden;
+            top: 100px;
+            bottom: 0px;
+            
+        }
+        footer a:link, a:visited {
             padding: 5px;
             margin: 5px 10px;
+            text-decoration: none;
+            color: rgb(83, 78, 78);
+        }
+        footer a:hover, a:active {
+            text-decoration: underline;
         }
         .container-footer-1 {
             background-color: lightgrey;
@@ -177,35 +165,18 @@
         hr {
             padding: 0px;
             margin: 0px;
-            opacity: 0.6;
-        }
-        .container-footer-2 {
-            display: flex;
-            flex-direction: row;
-            background-color: lightgrey;
-            justify-content: center;
-        }
-        .item-footer-container-2-left {
-            margin-left: 0px;
-            padding: 5px;
-            width: 50%;
-        }
-        .item-footer-container-2-right {
-            margin-left: 300px;
-            padding: 5px;
-            max-width: 50%;
-        }
+            opacity: 0.15;
+        } 
     </style>
 </head>
 <body>
     <header>
-        <div class="container-header">
-            <div class="item-header-gmail"><a href="#">Gmail</a></div>
-            <div class="item-header-images"><a href="#">Imagini</a></div>
-            <div class="item-header-menu"><a href="#" title="Aplicaţii Google"><img class="apps-icon" src="apps_black_24dp.svg" alt="apps icon"></a></div>
-            <div class="item-header-profile-pic"><img class="item-header-profile-pic" title="Cont Google Telcean Marius marius.telcean96@gmail.com" alt="Marius Telcean's profile picture, taken during a festival that took place in Cluj-Napoca's Central Park." src="profile-Pic.png"></div>
-        </div>
-        
+        <ul><!--For some reason yet unknown to me, the order is reversed. Perhaps something with the float property? >.< -->
+            <li><img class="header-profile-pic" title="Cont Google Telcean Marius marius.telcean96@gmail.com" alt="Marius Telcean's profile picture, taken during a festival that took place in Cluj-Napoca's Central Park." src="profile-Pic.png"></li>
+            <li><a href="#" title="Aplicaţii Google"><span class="material-icons">apps</span></a></li>
+            <li><a href="#">Imagini</a></li>
+            <li><a href="#">Gmail</a></li>
+        </ul>
     </header> 
     
     <main>
@@ -215,13 +186,13 @@
             </div>
             <div class="contaier-magglass-searchbox-keyboard">
                 <div class="item-body-mag-glass-icon">
-                    <img alt="Google magnifying glass icon" src="search_black_24dp.svg">
+                    <span class="material-icons">search</span>
                 </div>
                 <div class="item-body-search-box">
                     <input id="search-box" name="search-box" type="text"></input>
                 </div>
                     <div class="item-body-keyboard-icon">
-                        <img alt="Google keyboard icon" src="keyboard_black_24dp.svg">
+                        <span class="material-icons">keyboard</span>
                     </div>
             </div>
             <div class="container-searchgoogle-feelinglucky">
@@ -239,28 +210,23 @@
             </div>
         </div>
         
-       <!-- <div class="container-body">
-            <div class="item-body-logo">item-body-logo</div>
-            <div class="item-body-mag-glass-icon">item-body-mag-glass-icon</div>
-            <div class="item-body-search-box">item-body-search-box</div>
-            <div class="item-body-keyboard-icon">item-body-keyboard-icon</div>
-            <div class="item-body-search-google">item-body-search-google</div>
-            <div class="item-body-feeling-lucky">item-body-feeling-lucky</div>
-            <div class="item-body-google-provided-in">item-body-google-provided-in</div>
-            <div class="item-body-English">item-body-English</div>
-            <div class="item-body-magyar">item-body-magyar</div>
-            <div class="item-body-Deutsch">item-body-Deutsch</div>
-        </div>-->
+       
     </main>
 
     <footer>
-       <div class="container-footer-1">
-            <div class="item-footer-container-1"><p style="padding: 0px;">România</p></div>
-        </div><hr>
-        <div class="container-footer-2">
-            <div class="item-footer-container-2-left"><a href="#">Despre</a><a href="#">Publicitate</a><a href="#">Companii</a><a href="#">Cum funcţionează căutarea</a></div>
-            <div class="item-footer-container-2-right"><a href="#">Confidenţialitate</a><a href="#">Termeni</a><a href="#">Setări</a></div>
-        </div>
+        <ul id="one">
+            <li style="float: left"><a href="#">România</a></li>
+        </ul>
+        <hr>
+        <ul id="two">
+            <li style="float: left"><a href="#">Despre</a></li>
+            <li style="float: left"><a href="#">Publicitate</a></li>
+            <li style="float: left"><a href="#">Companii</a></li>
+            <li style="float: left"><a href="#">Cum funcţionează căutarea</a></li>
+            <li style="float: right"><a href="#">Confidenţialitate</a></li>
+            <li style="float: right"><a href="#">Termeni</a></li>
+            <li style="float: right"><a href="#">Setări</a></li>
+        </ul>
     </footer>
 </body>
 </html>
