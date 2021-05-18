@@ -5,7 +5,6 @@
     <title>Google</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
     <style>
         /* Header */
         ul {
@@ -30,7 +29,8 @@
         }
         
         .material-icons {
-            font-size: 24px; 
+            font-size: 24px;
+            opacity: 0.4; 
         }
 
         .header-profile-pic {
@@ -62,28 +62,32 @@
             margin-top: 25px;
             margin-bottom: 20px;
             margin-left: 200px;
+            border: 1px solid lightgrey;
+            border-radius: 30px;
+            height: 42px;
+            overflow:hidden;
         }
         .contaier-magglass-searchbox-keyboard:hover {
             box-shadow: 2px 2px 2px 2px grey;
         }
         .item-body-mag-glass-icon {
-            border: 1px solid grey;
-            border-top-left-radius: 5px;
-            border-bottom-left-radius: 5px;
-            border-right: 0px;
-            margin: 0 auto;
-            
+            flex-direction: start;
+            margin: 10px 8px;
         }
        
         [type='text'] {
-            margin: 0;
+            margin: 5px;
+            border: 0;
+            height: 30px;
+            width: 500px;
+            }
+
+        [type='text']:focus {
+                outline: 0;
             }
         .item-body-keyboard-icon {
-            border: 1px solid grey;
-            border-left: 0px;
-            border-top-right-radius: 5px;
-            border-bottom-right-radius: 5px;
-           
+            flex-direction: end;
+            margin: 10px 8px; 
         }
         .container-searchgoogle-feelinglucky {
             display: flex;
@@ -99,7 +103,10 @@
             padding: 5px 10px;
             margin: 10px;
         }
-
+        [type='submit']:hover {
+            border: 1px solid grey;
+            box-shadow: 2px 2px 2px grey;
+        }
         .container-googleprovidedin-English-magyar-Deutsch {
             display: flex;
             justify-content: space-evenly;
@@ -130,12 +137,15 @@
             
         } 
         /* Footer */
-#one {
-    margin: 0px;
-}
-#two {
-    margin: 0px;
-}
+        .container-footer {
+            margin-top: 100px;
+        }
+        .one {
+            margin: 0px;
+        }
+        .two {
+            margin: 0px;
+        }
         footer  ul {
             background-color:rgb(240, 239, 239);
             overflow: hidden;
@@ -152,16 +162,7 @@
         footer a:hover, a:active {
             text-decoration: underline;
         }
-        .container-footer-1 {
-            background-color: lightgrey;
-            width: 100%;
-            height: auto;
-            display: flex;
-        }
-        .item-footer-container-1 {
-            padding: 0px;
-            margin-left: 25px;
-        }
+        
         hr {
             padding: 0px;
             margin: 0px;
@@ -185,15 +186,9 @@
                 <img alt="Google's modern logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
             </div>
             <div class="contaier-magglass-searchbox-keyboard">
-                <div class="item-body-mag-glass-icon">
-                    <span class="material-icons">search</span>
-                </div>
-                <div class="item-body-search-box">
-                    <input id="search-box" name="search-box" type="text"></input>
-                </div>
-                    <div class="item-body-keyboard-icon">
-                        <span class="material-icons">keyboard</span>
-                    </div>
+                <div class="item-body-mag-glass-icon"><span class="material-icons">search</span></div>
+                <div class="item-body-search-box"><input placeholder="Te-am păcălit?" id="search-box" name="search-box" type="text"></input></div>
+                <div class="item-body-keyboard-icon"><span class="material-icons">keyboard</span></div>
             </div>
             <div class="container-searchgoogle-feelinglucky">
                 <div class="item-body-search-google">
@@ -214,11 +209,12 @@
     </main>
 
     <footer>
-        <ul id="one">
+        <div class="container-footer">
+        <ul class="one">
             <li style="float: left"><a href="#">România</a></li>
         </ul>
         <hr>
-        <ul id="two">
+        <ul class="two">
             <li style="float: left"><a href="#">Despre</a></li>
             <li style="float: left"><a href="#">Publicitate</a></li>
             <li style="float: left"><a href="#">Companii</a></li>
@@ -227,6 +223,7 @@
             <li style="float: right"><a href="#">Termeni</a></li>
             <li style="float: right"><a href="#">Setări</a></li>
         </ul>
+    </div>
     </footer>
 </body>
 </html>
